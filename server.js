@@ -53,9 +53,9 @@ connectToDB(global.PROJECT_NAME)
 // =========
 app.use( express.static( __dirname + '/dist/assets') );
 app.use( bodyParser.json() );
-app.use( bodyParser.urlencoded() );
+app.use( bodyParser.urlencoded( { extended: true }) );
 app.use( cookieParser() );
-app.use( session({secret: appSecrets.sessionSecret }) );
+app.use( session({secret: appSecrets.sessionSecret, resave: true, saveUninitialized: true }) );
 app.use( passport.initialize() );
 app.use( passport.session() );
 appAuthentication(User)
