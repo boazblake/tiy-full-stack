@@ -12,8 +12,8 @@
     "start": "node --use_strict server.js",
     "stop": "bash kill.sh",
     "watch": "npm run watch-js && npm run watch-css && echo '\n\n===== watching js and scss files in src/, writing changes to dist/ =====\n\n'&",
-    "watch-js": "./node_modules/.bin/watchify src/scripts/app.js --debug --verbose --transform babelify -o dist/assets/js/app.js&",
-    "watch-css": "./node_modules/.bin/node-sass -w --output-style compressed src/styles/style.scss dist/assets/css/style.css&",
+    "watch-js": "watchify src/scripts/app.js --debug --verbose --transform babelify -o dist/assets/js/app.js&",
+    "watch-css": "node-sass -w --output-style compressed src/styles/style.scss dist/assets/css/style.css&",
     "init-dev": "npm run name-project && npm install"
   },
   "browserify": {
@@ -39,17 +39,9 @@
     "scss",
     "node"
   ],
-  "author": { 
-    "name" : "Travis Hubbard", 
-    "email" : "t3patterson@gmail.com",
-    "url" : "http://github.com/t3patterson"
-    },
+  "author": "Travis Hubbard <t3patterson@gmail.com> (http://github.com/t3patterson)",
   "contributors": [
-    {
-      "name": "Justin Richards",
-      "email": "richards.justind@gmail.com",
-      "url": "http://github.com/magentanova"
-    }
+    "Justin Richards <richards.justind@gmail.com> (http://github.com/magentanova)"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -73,5 +65,10 @@
     "passport-local": "^1.0.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/magentanova/tiy-full-stack/issues"
+  },
+  "homepage": "https://github.com/magentanova/tiy-full-stack#readme",
+  "main": "server.js"
 }
