@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
-import MenuTangle from './menutangle.js'
 
-function app(){
-  ReactDOM.render(<MenuTangle/>, document.querySelector('.container'))
+
+const app = function() {
+  document.querySelector('.container').innerHTML = `<h1><i class="fa fa-thumbs-up" aria-hidden="true"></i></h1>`
 }
 
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..
